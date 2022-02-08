@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00bcd4"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="99dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/goodlogo" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp">
+
+        <RelativeLayout
+            android:id="@+id/belowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topLayout"
+            android:padding="20dp">
+
+
+            <RelativeLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+
+                <ImageView
+                    android:id="@+id/placeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+                <ImageView
+                    android:id="@+id/imageTag"
+                    android:layout_width="37dp"
+                    android:layout_height="36dp"
+                    android:layout_below="@+id/placeImage"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_add_place" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/divLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageLayout">
+
+                <TextView
+                    android:id="@+id/divisionTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Division:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+
+                    android:id="@+id/divisionSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/divisionTag"
+                    android:background="@color/white" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divLayout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tittleTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tittle:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/placeTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/tittleTag"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel1"
+                android:layout_marginTop="10dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/descriptionTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/placeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descriptionTag"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel2"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/routeTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route:"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/placeRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/routeTag"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/addPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/add_place" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp">
+
+
+    <TextView
+        android:id="@+id/adminTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/admin_dashboard"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/divLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adminTag"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/divisionTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/division"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Spinner
+
+            android:id="@+id/divisionSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/divisionTag" />
+
+
+    </RelativeLayout>
+
+    <!--Your comment
+    <ScrollView
+        android:paddingTop="10dp"
+        android:id="@+id/scrollview1"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_below="@+id/adminTag">
+
+        <RadioGroup
+            android:id="@+id/radioDivisionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/dhakaRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dhaka"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/chittagongRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chittagong"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/barishalRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barishal"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/khulnaRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khulna"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rajshahiRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rajshahi"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/sylhetRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sylhet"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rangpurRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rangpur"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/mymensinghRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mymensingh"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+    </ScrollView>
+    -->
+
+
+    <ScrollView
+        android:id="@+id/scroll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divLayout"
+        android:paddingTop="40dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/div"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="Dhaka"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Adminrecview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

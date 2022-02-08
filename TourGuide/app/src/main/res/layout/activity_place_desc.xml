@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.place_desc">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        android:transitionName="background_image_transition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/placeDecImageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/second_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="68dp"
+            android:text="Shajek"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/second_subtitle"
+            android:layout_width="337dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:alpha="0.5"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/second_title"
+            app:layout_constraintTop_toBottomOf="@+id/second_title" />
+
+        <RatingBar
+            android:id="@+id/second_ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:max="5"
+            android:numStars="5"
+            android:progressTint="#FF9800"
+            android:rating="4.5"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toStartOf="@+id/second_subtitle"
+            app:layout_constraintTop_toBottomOf="@+id/second_subtitle" />
+
+        <TextView
+            android:id="@+id/second_rating_number"
+            android:layout_width="51dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/second_ratingbar"
+            app:layout_constraintTop_toBottomOf="@id/second_subtitle" />
+
+        <TextView
+            android:id="@+id/second_rated_people"
+            android:layout_width="49dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/second_rating_number"
+            app:layout_constraintTop_toTopOf="@+id/second_rating_number" />
+
+        <ImageView
+
+            android:id="@+id/second_arrow_up"
+            android:layout_width="38dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_up_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/more_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toEndOf="@+id/second_rated_people"
+            app:layout_constraintTop_toBottomOf="@+id/second_subtitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/more_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="52dp"
+            android:text="More Details"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/placeDecImageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cmntSec"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_img"
+        app:layout_constraintVertical_bias="0.088">
+
+        <ImageView
+            android:id="@+id/post_detail_currentuser_img"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+
+            android:id="@+id/post_detail_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:ems="10"
+            android:hint="Write Comment"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_currentuser_img"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_currentuser_img"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_currentuser_img"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/post_detail_add_comment_btn"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittext_button_style_rounded"
+            android:text="Add"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.339"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_comment"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_comment"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RatingBar
+            android:id="@+id/revRating"
+            android:layout_width="240dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_comment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/third_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmntSec">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recCmnt" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

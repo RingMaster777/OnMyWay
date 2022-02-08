@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ON MY WAY</string>
+    <string name="slogan">Welcome to RAMBLER</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="menu_About_us">About_Us</string>
+    <string name="menu_Contact_Us">Contact_Us</string>
+    <string name="places">Explore</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="division">Division:</string>
+    <string name="add_place">Add Place</string>
+
+    <string-array name="division">
+        <item>Dhaka</item>
+        <item>Barishal</item>
+        <item>Chittagong</item>
+        <item>Mymensingh</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Rajshahi</item>
+
+    </string-array>
+
+</resources>

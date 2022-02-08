@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="@string/menu_home" />
+
+    </group>
+
+
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile"
+                    android:title="@string/menu_profile" />
+                <item
+                    android:id="@+id/nav_posts"
+                    android:icon="@drawable/profile"
+                    android:title="Posts"
+                    android:visible="false" />
+
+                <item
+                    android:id="@+id/nav_add_new_place"
+                    android:icon="@drawable/ic_baseline_save"
+                    android:title="Add Place" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout"
+                    android:title="@string/menu_logout" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_About_us"
+                    android:icon="@drawable/about"
+                    android:title="@string/menu_About_us" />
+                <item
+                    android:id="@+id/nav_Contact_Us"
+                    android:icon="@drawable/contact"
+                    android:title="@string/menu_Contact_Us" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

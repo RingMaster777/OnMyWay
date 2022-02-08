@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.profile_update">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customize your own Profile"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_below="@+id/topLayout"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/imagelayput"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/proImage"
+                android:layout_centerHorizontal="true"
+                android:text="Add Image"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/proImage"
+                android:layout_width="100dp"
+                android:layout_height="89dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/profile" />
+
+            <Button
+                android:id="@+id/editsave"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-2dp"
+                android:background="@drawable/ic_baseline_save"
+                android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/editjob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagelayput"
+            android:background="@drawable/round_border"
+            android:drawablePadding="16dp"
+            android:hint="Enter Occupation"
+
+            android:inputType="text"
+            android:padding="16dp" />
+
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editjob"
+            android:background="@drawable/round_border"
+            android:drawablePadding="16dp"
+            android:hint="Enter contact"
+            android:inputType="phone"
+            android:padding="16dp" />
+
+
+        <EditText
+            android:id="@+id/editcity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editPhone"
+            android:background="@drawable/round_border"
+            android:drawablePadding="16dp"
+            android:hint="Enter Location"
+            android:inputType="text"
+            android:padding="16dp" />
+
+
+        <TextView
+            android:id="@+id/biotag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editcity"
+            android:padding="5dp"
+            android:text="About Me"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bio"
+            android:layout_width="393dp"
+            android:layout_height="124dp"
+            android:layout_below="@+id/biotag"
+            android:drawablePadding="16dp"
+            android:hint="add bio"
+
+            android:inputType="text"
+            android:padding="16dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
